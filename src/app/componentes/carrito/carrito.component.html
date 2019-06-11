@@ -1,8 +1,8 @@
-<div class="container">
-  <h1 class="titulo">Carrito de Compras</h1>
+<div class="">
+  <h1 class="titulo animated fast fadeIn">Carrito de Compras</h1>
   <hr>
 
-  <div class="row">
+  <div class="row animated fast fadeIn">
     <table class="table col-8">
       <thead class="thead-light">
         <tr>
@@ -14,24 +14,15 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Tinte 1</td>
-          <td>35.00</td>
-          <td>1</td>
-          <td>35.00</td>
+        <tr *ngFor="let producto of productos">
+          <td>{{producto.nombreProducto}}</td>
+          <td>{{producto.precio}}.00</td>
+          <td>{{producto.cantidad}}</td>
+          <td>{{producto.precio}}.00</td>
           <td>
-            <button type="button" class="btn btn-outline-danger">
-              <i class="fa fa-trash-alt"></i>
-            </button>
-          </td>
-        </tr>
-        <tr>
-          <td>Tinte 2</td>
-          <td>25.00</td>
-          <td>1</td>
-          <td>25.00</td>
-          <td>
-            <button type="button" class="btn btn-outline-danger">
+            <button type="button"
+                    class="btn btn-outline-danger"
+                    (click)="eliminarProducto(productos.indexOf(producto))">
               <i class="fa fa-trash-alt"></i>
             </button>
           </td>

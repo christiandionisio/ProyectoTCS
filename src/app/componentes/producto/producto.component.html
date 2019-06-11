@@ -1,4 +1,4 @@
-<h1 class="animated fast fadeIn">Producto 1</h1>
+<h1 class="animated fadeIn">{{producto.ProductoNombre}}</h1>
 <hr>
 <div class="row animated fadeIn">
   <div class="col-5">
@@ -6,15 +6,26 @@
   </div>
   <div class="col-7">
     <h2>Descripción</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, maxime.</p>
+    <p>{{producto.ProductosDescripcion}}</p>
     <!-- <div *ngIf="pelicula.tagline">
       <h2>Frase Célebre</h2>
       <p>{{pelicula.tagline}}</p>
     </div> -->
-    <p>Popularidad: <span class="badge badge-primary">500</span></p>
-    <p>Voto Promedio: <span class="badge badge-success">4.3</span></p>
-    <button type="button"class="btn btn-outline-danger">
-      Regresar
+    <p>Tipo: <span class="badge badge-primary">{{producto.tipo}}</span></p>
+    <p>Precio: <span class="badge badge-success">{{producto.ProductoPrecioUnitario}}.00</span></p>
+    <button type="button" class="btn btn-outline-danger"
+            (click)="regresar()">
+      <i class="fas fa-angle-left"></i>&nbsp;Regresar
+    </button>
+    &nbsp;
+    <button type="button" class="btn btn-outline-success">
+      <i class="far fa-credit-card"></i>&nbsp;Comprar
+    </button>
+    &nbsp;
+    <button type="button"
+            class="btn btn-outline-primary"
+            (click)="llenarCarrito()">  
+      <i class="fas fa-shopping-cart"></i>&nbsp;Añadir al carrito
     </button>
   </div>
 </div>

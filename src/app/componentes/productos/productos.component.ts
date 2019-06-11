@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {ProductosService} from '../../servicios/productos.service';
 
 @Component({
   selector: 'app-productos',
@@ -8,13 +9,25 @@ import { Router } from '@angular/router';
 })
 export class ProductosComponent implements OnInit {
 
-  constructor(public router:Router) { }
+  private productos:any = [];
+
+  constructor(public router:Router, private ps:ProductosService) {
+    this.mostrarProductos();
+    //console.log(this.productos);
+  }
 
   ngOnInit() {
   }
 
-  mostrarProducto(){
-    this.router.navigate(['producto']);
+  mostrarProducto(id:string){
+    this.router.navigate(['producto',id,'productos']);
   }
 
+  mostrarProductos(){
+    this.ps.getProductos().subscribe((data:any) =>{
+      for (let i = 0; i < data.length; i++) {
+          this.productos.push(data[i]);
+      }
+    });
+  }
 }

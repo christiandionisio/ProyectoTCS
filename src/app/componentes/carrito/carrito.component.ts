@@ -8,7 +8,11 @@ import { Router } from '@angular/router'
 })
 export class CarritoComponent implements OnInit {
 
+  private productos:any[];
+
   constructor(public router:Router) {
+    this.productos = JSON.parse(localStorage.getItem("carrito"));
+    //console.log(this.productos);
   }
 
   ngOnInit() {
@@ -16,6 +20,14 @@ export class CarritoComponent implements OnInit {
 
   mostrarProductos(){
     this.router.navigate(['/productos']);
+  }
+
+  eliminarProducto(index:any){
+    if (index > -1) {
+        this.productos.splice(index,1);
+    }
+
+    localStorage.setItem('carrito',JSON.stringify(this.productos));
   }
 
 }
