@@ -13,7 +13,7 @@ export class ProductosComponent implements OnInit {
 
   constructor(public router:Router, private ps:ProductosService) {
     this.mostrarProductos();
-    //console.log(this.productos);
+    console.log(this.productos);
   }
 
   ngOnInit() {

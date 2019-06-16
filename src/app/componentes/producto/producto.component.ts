@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute,Router } from '@angular/router';
 import {ProductosService} from '../../servicios/productos.service';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-producto',
@@ -10,11 +11,13 @@ import {ProductosService} from '../../servicios/productos.service';
 export class ProductoComponent implements OnInit {
 
   private producto:any = [];
+  private alerta:boolean = false;
 
   constructor(private router:Router,
               private route:ActivatedRoute,
               private ps:ProductosService) {
               this.mostrarProducto(this.route.snapshot.paramMap.get('id'));
+
   }
 
   ngOnInit() {
@@ -48,6 +51,15 @@ export class ProductoComponent implements OnInit {
       localStorage.setItem("carrito",JSON.stringify(carrito));
     }
 
+    this.alerta = true;
+    window.setTimeout(function() {
+        $(".alert").fadeTo(500, 0).slideUp(500, function(){
+            $(this).remove();
+        });
+        this.alerta = false;
+    }, 1000);
+
+    
     //localStorage.removeItem("carrito");
   }
 

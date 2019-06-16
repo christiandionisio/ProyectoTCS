@@ -18,6 +18,7 @@ import { LoginComponent } from './componentes/sesion/login/login.component';
 import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 import { ProductoComponent } from './componentes/producto/producto.component';
+import { HistorialComprasComponent } from './componentes/historial-compras/historial-compras.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ProductoComponent } from './componentes/producto/producto.component';
     LoginComponent,
     CarritoComponent,
     RegistroComponent,
-    ProductoComponent
+    ProductoComponent,
+    HistorialComprasComponent
   ],
   imports: [
     BrowserModule,

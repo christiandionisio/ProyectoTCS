@@ -38,4 +38,8 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(["/carrito"]);
   }
 
+  mostrarHistorial(){
+    this.router.navigate(["/historialCompras"]);
+  }
+
 }

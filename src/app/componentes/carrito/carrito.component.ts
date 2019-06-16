@@ -9,13 +9,27 @@ import { Router } from '@angular/router'
 export class CarritoComponent implements OnInit {
 
   private productos:any[];
+  private total:number = 0;
+  private cantidad:number = 0;
 
   constructor(public router:Router) {
     this.productos = JSON.parse(localStorage.getItem("carrito"));
     //console.log(this.productos);
+    this.sumaTotal();
   }
 
   ngOnInit() {
+  }
+
+  sumaTotal(){
+    this.productos.forEach(element => {
+      
+      this.total = this.total +  Number(element.precio);
+      this.cantidad = this.cantidad + 1;
+      
+    });
+    //console.log(this.total);
+    
   }
 
   mostrarProductos(){
@@ -23,11 +37,16 @@ export class CarritoComponent implements OnInit {
   }
 
   eliminarProducto(index:any){
+    
     if (index > -1) {
         this.productos.splice(index,1);
     }
 
     localStorage.setItem('carrito',JSON.stringify(this.productos));
+
+    this.total = 0;
+    this.cantidad = 0;
+    this.sumaTotal();
   }
 
 }
