@@ -30,7 +30,7 @@ export class AppComponent implements OnInit, AfterContentChecked {
       this.eMenu = false;
     }
 
-    if (this.router.url == '/login') {
+    if (this.router.url == '/login' || this.router.url == '/registro') {
         this.eNavBar = false;
     }
   }

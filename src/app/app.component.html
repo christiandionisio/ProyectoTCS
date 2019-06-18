@@ -1,7 +1,6 @@
 <app-navbar *ngIf="eNavBar"></app-navbar>
 <app-menu *ngIf="eMenu"></app-menu>
-<div class="contenido abrir"
-    [ngClass]="{'container': eContenedor, 'main-container': eContenedor,
-                'contenido': !eContenedor, 'abrir': !eContenedor}">
+<div class=""
+    [ngClass]="{'container': eContenedor, 'main-container': eContenedor}">
   <router-outlet></router-outlet>
 </div>
