@@ -1,29 +1,8 @@
-<!-- <div class="card w-25" style="width: auto; margin: auto auto;">
-  <div class="card-body">
-    <h5 class="card-title">TINTES LUZANDER</h5>
-    <form (ngSubmit)="iniciarSesion()" novalidate>
-      <div class="form-group">
-        <input type="email" class="form-control"
-                name="correo"
-                placeholder="Ingrese su correo"
-                [(ngModel)] = "correo">
-      </div>
-      <div class="form-group">
-        <input type="password"
-                class="form-control"
-                name="password"
-                placeholder="Contraseña"
-                [(ngModel)] = "password">
-      </div>
-      <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
-    </form>
-  </div>
-</div> -->
 <div class="container">
   <div class="card text-center w-50 mt-4">
       <div class="card-body">
           <h1 class="card-title">TINTES LUZANDER</h1>
-          <form class="w-50" (ngSubmit)="iniciarSesion()" novalidate>
+          <form class="w-50" (ngSubmit)="iniciarSesion(correo,password)" novalidate>
               <div class="input-group mb-3">
                   <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1">
@@ -43,7 +22,9 @@
                         required [(ngModel)] = "password">
               </div>
               <div class="input-group mb-3">
-                  <button type="submit" class="btn btn-success btn-block">Iniciar Sesión <i class="fa fa-sign-in-alt"></i></button>
+                  <button type="submit" class="btn btn-success btn-block">
+                    Iniciar Sesión <i class="fa fa-sign-in-alt"></i>
+                  </button>
               </div>
           </form>
       </div>

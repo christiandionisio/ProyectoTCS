@@ -9,6 +9,9 @@ import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 import { ProductoComponent } from './componentes/producto/producto.component';
 import { HistorialComprasComponent } from './componentes/historial-compras/historial-compras.component';
+import { ProductosAdminComponent } from './componentes/administracion/productos-admin/productos-admin.component';
+import { OrdenesVentaComponent } from './componentes/administracion/ordenes-venta/ordenes-venta.component';
+import { ListaClientesComponent } from './componentes/administracion/lista-clientes/lista-clientes.component';
 
 const app_routes: Routes = [
   { path: 'inicio', component: InicioComponent },
@@ -21,6 +24,9 @@ const app_routes: Routes = [
   { path: 'registro', component: RegistroComponent},
   { path: 'producto/:id/:ret', component: ProductoComponent},
   { path: 'historialCompras', component: HistorialComprasComponent},
+  { path: 'menuAdmin/productos', component: ProductosAdminComponent},
+  { path: 'menuAdmin/ventas', component: OrdenesVentaComponent},
+  { path: 'menuAdmin/clientes', component: ListaClientesComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 
 ];

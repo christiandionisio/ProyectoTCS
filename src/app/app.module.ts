@@ -19,6 +19,12 @@ import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 import { ProductoComponent } from './componentes/producto/producto.component';
 import { HistorialComprasComponent } from './componentes/historial-compras/historial-compras.component';
+import { MenuComponent } from './componentes/administracion/menu/menu.component';
+import { ProductosAdminComponent } from './componentes/administracion/productos-admin/productos-admin.component';
+import { OrdenesVentaComponent } from './componentes/administracion/ordenes-venta/ordenes-venta.component';
+import { ListaClientesComponent } from './componentes/administracion/lista-clientes/lista-clientes.component';
+
+//Angular Material
 
 @NgModule({
   declarations: [
@@ -33,7 +39,11 @@ import { HistorialComprasComponent } from './componentes/historial-compras/histo
     CarritoComponent,
     RegistroComponent,
     ProductoComponent,
-    HistorialComprasComponent
+    HistorialComprasComponent,
+    MenuComponent,
+    ProductosAdminComponent,
+    OrdenesVentaComponent,
+    ListaClientesComponent
   ],
   imports: [
     BrowserModule,
