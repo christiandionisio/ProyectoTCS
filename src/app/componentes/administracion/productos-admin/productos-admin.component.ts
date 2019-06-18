@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ProductosService} from '../../../servicios/productos.service';
 
 @Component({
   selector: 'app-productos-admin',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductosAdminComponent implements OnInit {
 
-  constructor() { }
+  private productos: any = [];
+  constructor(private ps:ProductosService) {
+    this.mostrarProductos();
+    console.log(this.productos);
+  }
 
   ngOnInit() {
+  }
+
+  mostrarProductos(){
+    this.ps.getProductos().subscribe((data:any) =>{
+      for (let i = 0; i < data.length; i++) {
+          this.productos.push(data[i]);
+      }
+    });
   }
 
 }

@@ -12,6 +12,7 @@ import { HistorialComprasComponent } from './componentes/historial-compras/histo
 import { ProductosAdminComponent } from './componentes/administracion/productos-admin/productos-admin.component';
 import { OrdenesVentaComponent } from './componentes/administracion/ordenes-venta/ordenes-venta.component';
 import { ListaClientesComponent } from './componentes/administracion/lista-clientes/lista-clientes.component';
+import { PagoComponent } from './componentes/pago/pago.component';
 
 const app_routes: Routes = [
   { path: 'inicio', component: InicioComponent },
@@ -27,6 +28,7 @@ const app_routes: Routes = [
   { path: 'menuAdmin/productos', component: ProductosAdminComponent},
   { path: 'menuAdmin/ventas', component: OrdenesVentaComponent},
   { path: 'menuAdmin/clientes', component: ListaClientesComponent},
+  { path: 'pago', component: PagoComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 
 ];

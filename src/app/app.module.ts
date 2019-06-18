@@ -23,6 +23,7 @@ import { MenuComponent } from './componentes/administracion/menu/menu.component'
 import { ProductosAdminComponent } from './componentes/administracion/productos-admin/productos-admin.component';
 import { OrdenesVentaComponent } from './componentes/administracion/ordenes-venta/ordenes-venta.component';
 import { ListaClientesComponent } from './componentes/administracion/lista-clientes/lista-clientes.component';
+import { PagoComponent } from './componentes/pago/pago.component';
 
 //Angular Material
 
@@ -43,7 +44,8 @@ import { ListaClientesComponent } from './componentes/administracion/lista-clien
     MenuComponent,
     ProductosAdminComponent,
     OrdenesVentaComponent,
-    ListaClientesComponent
+    ListaClientesComponent,
+    PagoComponent
   ],
   imports: [
     BrowserModule,
