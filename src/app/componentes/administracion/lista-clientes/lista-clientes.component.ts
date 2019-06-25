@@ -13,6 +13,7 @@ export class ListaClientesComponent implements OnInit {
   constructor(private us:UsuariosService) {
 
     this.mostrarUsuarios();
+    //console.log(this.usuarios);
 
   }
 

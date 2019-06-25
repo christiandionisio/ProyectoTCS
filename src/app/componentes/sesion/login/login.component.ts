@@ -31,11 +31,17 @@ export class LoginComponent implements OnInit {
         id : this.usuario.idUsuario,
         nombre: this.usuario.nombreUsusario,
         a_paterno: this.usuario.apellidoPaternoUsuario,
-        a_materno: this.usuario.apellidoMaternoUsuario
+        a_materno: this.usuario.apellidoMaternoUsuario,
+        cargo: this.usuario.cargo
       }
 
       localStorage.setItem("usuario",JSON.stringify(usuario));
-      this.router.navigate(['/home']);
+
+      if (this.usuario.cargo == "admin") {
+          this.router.navigate(['/menuAdmin/productos']);
+      }else{
+        this.router.navigate(['/home']);
+      }
     });
   }
 

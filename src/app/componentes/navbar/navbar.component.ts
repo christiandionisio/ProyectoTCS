@@ -42,4 +42,8 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(["/historialCompras"]);
   }
 
+  abrirRegisstro(){
+    this.router.navigate(["/registro"]);
+  }
+
 }

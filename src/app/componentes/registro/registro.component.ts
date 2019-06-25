@@ -19,7 +19,7 @@ export class RegistroComponent implements OnInit {
                   pass:string,rep_pass:string){
 
                     this.us.insertarUsuario(nombre,a_paterno,a_materno,telefono,direccion,correo,pass).subscribe((data:any) =>{
-                      console.log(data.message);
+                      console.log(data);
                     });
 
   }

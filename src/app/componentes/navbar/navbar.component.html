@@ -27,6 +27,11 @@
               type="button" (click)="abrirlogin()" *ngIf="!sesionIniciada()">
         <i class="fas fa-user-circle"></i>&nbsp;&nbsp;Iniciar Sesión
       </button>
+      &nbsp;&nbsp;
+      <button class="btn btn-outline-success my-2 my-sm-0"
+              type="button" (click)="abrirRegisstro()" *ngIf="!sesionIniciada()">
+        <i class="fas fa-user-circle"></i>&nbsp;&nbsp;Regístrate
+      </button>
 
       <!-- <ul class="navbar-nav mr-auto">
         <li class="nav-item" routerLinkActive="active">
