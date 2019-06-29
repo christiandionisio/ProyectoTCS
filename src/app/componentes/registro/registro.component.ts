@@ -9,7 +9,7 @@ import {UsuariosService} from '../../servicios/usuarios.service';
 export class RegistroComponent implements OnInit {
 
   constructor(private us:UsuariosService) { }
-
+  
   ngOnInit() {
   }
 

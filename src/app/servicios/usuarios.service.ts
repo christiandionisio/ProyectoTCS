@@ -7,11 +7,9 @@ import {HttpClient} from '@angular/common/http';
 export class UsuariosService {
 
   private  PHP_API_SERVER = "http://localhost/apiPrueba/v1/usuarios";
-  private headers:any;
 
   constructor(private http:HttpClient) {
-    this.headers = new Headers();
-    this.headers.append('Content-Type', 'application/json');
+
   }
 
   getusuarios(){

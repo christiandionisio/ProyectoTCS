@@ -25,4 +25,10 @@ export class ProductosAdminComponent implements OnInit {
     });
   }
 
+  guardarProducto(nombre:string,precio:number,descripcion:string){
+      this.ps.insertrarProducto(nombre,precio,descripcion).subscribe((data)=>{
+        console.log(data);
+      });
+  }
+
 }
