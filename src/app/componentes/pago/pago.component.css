@@ -325,3 +325,13 @@ Credit Card
 .the-most img {
   max-width: 100%;
 }
+
+.fondoPago{
+  background: #e9e9e9;
+}
+
+.fondoDatos{
+  background: #f4f4f4;
+  padding-top: 30px;
+  padding-left: 30px;
+}

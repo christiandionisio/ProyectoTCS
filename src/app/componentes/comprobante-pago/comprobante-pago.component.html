@@ -1,0 +1,54 @@
+<div id="content" #content>
+  <div class="container">
+  	<div>
+  		<h1>Comprobante de Pago</h1>
+  		<br><br>
+  	</div>
+  	<div class = "contenido_item">
+  		<h4>Señor(a): Arnold Ingunza Alvarez</h4>
+		<h4>RUC: 10721782005</h4>
+		<h4>Fecha: 29/06/16</h4>
+  		<table class="table table-bordered">
+  		  <thead class="thead-dark">
+  		    <tr class="table-secundary">
+  		      <th scope="col">Cantidad</th>
+  		      <th scope="col">Descripcion</th>
+  		      <th scope="col">Precio Unitario</th>
+  		      <th scope="col">Precio Total</th>
+  		    </tr>
+  		  </thead>
+  		  <tbody>
+  		    <tr>
+  								<td>2</td>
+  								<td>Tinte de Calzado de Cuero</td>
+  								<td>S/. 25.00</td>
+  								<td>S/. 50.00</td>
+
+  							</tr>
+  							<tr>
+  								<td>2</td>
+  								<td>Tinte de Calzado de Gamuza</td>
+  								<td>S/. 35.00</td>
+  								<td>S/. 70.00</td>
+
+  							</tr>
+  							<tr>
+  								<td>3</td>
+  								<td>Tinte para Casaca</td>
+  								<td>S/. 25.00</td>
+  								<td>S/. 75.00</td>
+
+  							</tr>
+
+  		  </tbody>
+  		</table>
+  		<div class="impuesto">
+  			<h4 align="right" >Importe Base: S/. 195.00</h4>
+			<h4 align="right" >IGV (18%): S/. 35.10</h4>
+			<h4 align="right" >Importe Total: S/. 230.10</h4>
+  	</div>
+  		</div>
+  </div>
+</div>
+
+<button type="button" (click)="descargarPDF()">Descargar PDF</button>

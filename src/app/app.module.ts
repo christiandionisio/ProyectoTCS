@@ -24,6 +24,7 @@ import { ProductosAdminComponent } from './componentes/administracion/productos-
 import { OrdenesVentaComponent } from './componentes/administracion/ordenes-venta/ordenes-venta.component';
 import { ListaClientesComponent } from './componentes/administracion/lista-clientes/lista-clientes.component';
 import { PagoComponent } from './componentes/pago/pago.component';
+import { ComprobantePagoComponent } from './componentes/comprobante-pago/comprobante-pago.component';
 
 //Angular Material
 
@@ -45,7 +46,8 @@ import { PagoComponent } from './componentes/pago/pago.component';
     ProductosAdminComponent,
     OrdenesVentaComponent,
     ListaClientesComponent,
-    PagoComponent
+    PagoComponent,
+    ComprobantePagoComponent
   ],
   imports: [
     BrowserModule,

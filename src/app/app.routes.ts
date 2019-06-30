@@ -13,6 +13,7 @@ import { ProductosAdminComponent } from './componentes/administracion/productos-
 import { OrdenesVentaComponent } from './componentes/administracion/ordenes-venta/ordenes-venta.component';
 import { ListaClientesComponent } from './componentes/administracion/lista-clientes/lista-clientes.component';
 import { PagoComponent } from './componentes/pago/pago.component';
+import { ComprobantePagoComponent } from './componentes/comprobante-pago/comprobante-pago.component';
 
 const app_routes: Routes = [
   { path: 'inicio', component: InicioComponent },
@@ -29,6 +30,7 @@ const app_routes: Routes = [
   { path: 'menuAdmin/ventas', component: OrdenesVentaComponent},
   { path: 'menuAdmin/clientes', component: ListaClientesComponent},
   { path: 'pago', component: PagoComponent},
+  { path: 'comprobante', component: ComprobantePagoComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 
 ];

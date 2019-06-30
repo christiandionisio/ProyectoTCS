@@ -23,13 +23,13 @@ export class CarritoComponent implements OnInit {
 
   sumaTotal(){
     this.productos.forEach(element => {
-      
+
       this.total = this.total +  Number(element.precio);
       this.cantidad = this.cantidad + 1;
-      
+
     });
     //console.log(this.total);
-    
+
   }
 
   mostrarProductos(){
@@ -37,7 +37,7 @@ export class CarritoComponent implements OnInit {
   }
 
   eliminarProducto(index:any){
-    
+
     if (index > -1) {
         this.productos.splice(index,1);
     }
@@ -47,6 +47,10 @@ export class CarritoComponent implements OnInit {
     this.total = 0;
     this.cantidad = 0;
     this.sumaTotal();
+  }
+
+  pagarOnline(){
+    this.router.navigate(['/pago']);
   }
 
 }
